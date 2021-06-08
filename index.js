@@ -199,7 +199,7 @@ module.exports = function Teleport(mod) {
 		wLoc = e.w;
 	});
 
-	mod.hook("S_PLAYER_STAT_UPDATE", 15, e => {
+	mod.hook("S_PLAYER_STAT_UPDATE", 16, e => {
 		curHp = e.hp;
 		maxHp = e.maxHp;
 	});
