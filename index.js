@@ -183,7 +183,7 @@ module.exports = function Teleport(mod) {
 		}
 	});
 
-	mod.hook("S_LOGIN", 14, (e) => {
+	mod.hook("S_LOGIN", 15, (e) => {
 		gameId = e.gameId;
 		isCastanic = Math.floor((e.templateId - 10101) / 200) === 3;
 	});
@@ -199,7 +199,7 @@ module.exports = function Teleport(mod) {
 		wLoc = e.w;
 	});
 
-	mod.hook("S_PLAYER_STAT_UPDATE", mod.majorPatchVersion >= 108 ? 17 : 16, e => {
+	mod.hook("S_PLAYER_STAT_UPDATE", 17, e => {
 		curHp = e.hp;
 		maxHp = e.maxHp;
 	});
