@@ -95,6 +95,8 @@ module.exports = function TeleportLite(mod) {
 		"save": (name, zOffset = 0) => {
 			const z = zOffset ? locationEvent.loc.z + Number(zOffset) : locationEvent.loc.z;
 
+			["&quot;", "&lt;", "&gt;", "&amp;"].forEach(w => name = name.replaceAll(w, ""));
+
 			if (name) {
 				bookmarks.set(name, {
 					"x": locationEvent.loc.x,
@@ -225,7 +227,7 @@ module.exports = function TeleportLite(mod) {
 		if (event.code === 16) return false;
 	});
 
-	mod.hook("S_PLAYER_STAT_UPDATE", mod.majorPatchVersion === 92 ? 13 : 17, e => {
+	mod.hook("S_PLAYER_STAT_UPDATE", mod.majorPatchVersion >= 93 ? 14 : 13, e => {
 		curHp = e.hp;
 		maxHp = e.maxHp;
 	});

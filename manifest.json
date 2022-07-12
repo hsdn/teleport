@@ -1,7 +1,7 @@
 {
     "files": {
         "README.md": "46e214cf3b2117655d66677459f7ab76a981f5bd1fef0a97262b36fdde736b03",
-        "index.js": "f33d27aedaf33fea4703fefb220728630c68aae02475da340ed2f312ff4a9547",
+        "index.js": "3781476c2aa303010a45cbb8992c27146e18469f28a69e38cdc6bf6ccdc0382c",
         "module.json": "99df85cf9df06152592df1ed8524c932cd58941862f2ffea2af44eb2f45ac4b3"
     },
     "defs": {
@@ -12,6 +12,6 @@
         "S_CREATURE_CHANGE_HP": 6,
         "S_EXIT": 3,
         "S_INSTANT_MOVE": 3,
-        "S_PLAYER_STAT_UPDATE": [13,17]
+        "S_PLAYER_STAT_UPDATE": [13,14]
     }
 }
